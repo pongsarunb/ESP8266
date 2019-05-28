@@ -5,7 +5,7 @@
  * Circuit
  * PIR +++ MCU
  * ----     ---
- * VCC  ->  3V
+ * VCC  ->  VIN
  * GND  ->  GND
  * OUT  ->  D4 (GPIO 2)
  */
@@ -25,11 +25,11 @@ void loop() {
   if(state == HIGH) {
       Serial.println("Motion detected!");
       digitalWrite (LedPin, HIGH);
-      delay(3000);
+      delay(1000);
     }
     else {
       Serial.println("Motion absent!");
       digitalWrite (LedPin, LOW);
-      delay(3000);
+      delay(1000);
     }
 }
